@@ -75,7 +75,9 @@ export default class CustomCard extends Component {
 
     stopRecording = () => {
         mediaRecorder.stop()
-        this.speech_to_text()
+        this.speech_to_text().catch(console.error
+            
+        )
     }
 
     componentDidMount(){
@@ -122,7 +124,7 @@ export default class CustomCard extends Component {
         .join('\n');
         console.log(`Transcription: ${transcription}`);
     }
-
+    // main().catch(console.error);
 
     render(){
         return(        
